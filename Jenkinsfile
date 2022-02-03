@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build Container') {
             steps {
-                echo 'Building..'
+                sh 'docker build -t test-python .'
             }
         }
         stage('Test') {
