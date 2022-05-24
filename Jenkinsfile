@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build Container') {
             steps {
-                sh 'docker build -t test-python .'
+                echo 'Building..'
             }
         }
         stage('Test') {
